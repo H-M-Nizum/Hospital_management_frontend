@@ -3,8 +3,8 @@ body {
     padding: 0;
 }
 
-/* Header seaction start */
-    /* navbar section start */
+/* ======================Header seaction start====================== */
+    /* ----------------------navbar section start---------------------- */
 nav {
     background-color: #e0f1fc;
     margin: 0 auto; /* Center align the navbar */
@@ -22,8 +22,26 @@ nav {
 .menu-container li:hover {
     color: #e8270a;
 }
+    /* ----------------------navbar section end---------------------- */
 
-    /* navbar section end */
-
-
-/* Header seaction end */
+    /* ----------------------Banner section start---------------------- */
+.banner-container{
+    width: 1200px;
+    margin: 50px auto;
+}
+.banner-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #e0f1fc;
+    gap: 50px;
+    padding: 0px 50px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 10px;
+}
+.banner-img{
+    height: 600px;
+    width: 300px;
+}
+    /* ----------------------Banner section end---------------------- */
+/* ======================Header seaction end====================== */
