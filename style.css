@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header seaction start */
+    /* navbar section start */
+nav {
+    background-color: #e0f1fc;
+    margin: 0 auto; /* Center align the navbar */
+    padding: 10px 0; /* Add padding as needed */
+}
+.logo-container img {
+    max-height: 40px; /* Set max height for the logo image */
+}
+.menu-container li {
+    margin: 0;
+    padding: 0 15px; /* Add padding between menu items */
+    cursor: pointer;
+}
+/* Add hover effect if desired */
+.menu-container li:hover {
+    color: #e8270a;
+}
+
+    /* navbar section end */
+
+
+/* Header seaction end */
