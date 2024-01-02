@@ -58,5 +58,29 @@ const displayServicesData = (services) => {
 
  }
  loadDoctors()
+
+//  --------------------Designation section start-----------------
+const loadDesignation = () => {
+    fetch("https://testing-8az5.onrender.com/doctor/designation/")
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((item) => {
+          document.getElementById("drop-deg").innerHTML += `<li class="dropdown-item">${item?.name}</li>`;
+        });
+      });
+  };
+loadDesignation();
+const loadSpecialization = () => {
+    fetch("https://testing-8az5.onrender.com/doctor/specialization/")
+      .then((res) => res.json())
+      .then((data) => {
+        data.forEach((item) => {
+            document.getElementById("drop-spe").innerHTML += `<li class="dropdown-item">${item?.name}</li>`;
+        });
+    });
+};
+
+loadSpecialization();
+//  --------------------- Designation section end-----------------
  // ===================Doctor section  end===================
  
