@@ -44,4 +44,10 @@ nav {
     width: 300px;
 }
     /* ----------------------Banner section end---------------------- */
+
+    /* Services section start */
+    .services-container{
+        width: 1200px;
+        margin: 50px auto;
+    }
 /* ======================Header seaction end====================== */
