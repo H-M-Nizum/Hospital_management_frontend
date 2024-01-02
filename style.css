@@ -59,4 +59,29 @@ nav {
 }
 /* ----------------------Services section end---------------------- */
 
-.swiffy-slider{}
+/* -------------------Doctor section start---------------- */
+.doctor-card{
+    width: 300px;
+    height: 330px;
+    box-shadow: 4px 4px 8px gray;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+.doctor-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+#searchs{
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px gray;
+    border: none;
+
+}
+/* -------------------Doctor section end---------------- */
+
+.doctors-container{
+    margin: 200px 50px;
+}

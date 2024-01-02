@@ -30,4 +30,8 @@ const displayServicesData = (services) => {
 
  loadservices()
 
+ // ===================Services section  end===================
+ 
+ // ===================Doctor section  start===================
+ // ===================Doctor section  end===================
  
