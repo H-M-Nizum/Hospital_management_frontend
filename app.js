@@ -11,9 +11,9 @@
 //  Display data that provide loadservice function
 const displayServicesData = (services) => {
     services.forEach(service => {
-        console.log(service)
+        // console.log(service)
         // access parent tag : ul and add child li that contain services card
-        const parenttag = document.getElementById("services-container-id").innerHTML += `                <li id="service-li-id" class="slide-visible">
+        document.getElementById("services-container-id").innerHTML += `                <li id="service-li-id" class="slide-visible">
         <div class="card shadow h-100">
             <div class="ratio ratio-16x9">
                 <img src="${service.image}" class="card-img-top" loading="lazy" alt="Services image">
@@ -33,5 +33,30 @@ const displayServicesData = (services) => {
  // ===================Services section  end===================
  
  // ===================Doctor section  start===================
+
+ const loadDoctors = () => {
+    fetch("http://testing-8az5.onrender.com/doctor/list/")
+    .then((res) => res.json())
+    .then((data) => displayDoctors(data?.results))
+ }
+//  ? optional chaining, handel error like undefine data
+ const displayDoctors = (doctors) => {
+    console.log(doctors)
+    doctors?.forEach(doctor => {
+        console.log(doctor)
+        document.getElementById("doctors").innerHTML += `<div class="doctor-card">
+        <img class="doctor-img" src="${doctor.image}" alt="Doctor-image">
+        <h4>${doctor?.full_name}</h4>
+        <h6>${doctor?.designation[0]}</h6>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <p>${doctor?.specialization?.map(iteam => {
+            return `<button>${iteam}</button>`
+        })}</p>
+        <button>Details</button>
+    </div>`
+    })
+
+ }
+ loadDoctors()
  // ===================Doctor section  end===================
  

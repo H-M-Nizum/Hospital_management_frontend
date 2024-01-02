@@ -62,7 +62,7 @@ nav {
 /* -------------------Doctor section start---------------- */
 .doctor-card{
     width: 300px;
-    height: 330px;
+    height: 350px;
     box-shadow: 4px 4px 8px gray;
     border-radius: 10px;
     text-align: center;
@@ -80,8 +80,7 @@ nav {
     border: none;
 
 }
-/* -------------------Doctor section end---------------- */
-
 .doctors-container{
     margin: 200px 50px;
 }
+/* -------------------Doctor section end---------------- */
