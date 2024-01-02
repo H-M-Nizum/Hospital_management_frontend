@@ -45,9 +45,18 @@ nav {
 }
     /* ----------------------Banner section end---------------------- */
 
-    /* Services section start */
-    .services-container{
-        width: 1200px;
-        margin: 50px auto;
-    }
+
+
 /* ======================Header seaction end====================== */
+
+/*  ======================Main section start====================== */
+
+/* ----------------------Services section start---------------------- */
+.services-container{
+    width: 1200px;
+    height: 600px;
+    margin: 50px auto;
+}
+/* ----------------------Services section end---------------------- */
+
+.swiffy-slider{}
