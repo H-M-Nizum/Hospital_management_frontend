@@ -35,28 +35,43 @@ const displayServicesData = (services) => {
  // ===================Doctor section  start===================
 
  const loadDoctors = (search) => {
+    document.getElementById("doctors").innerHTML = ""
+    document.getElementById("loding").style.display = "block"
+    // console.log(search)
     fetch(`https://testing-8az5.onrender.com/doctor/list/?search=${
         search ? search : ""
       }`)
     .then((res) => res.json())
-    .then((data) => displayDoctors(data?.results))
+    .then((data) => {
+        // console.log(data)
+        displayDoctors(data?.results)
+    })
  }
 //  ? optional chaining, handel error like undefine data
  const displayDoctors = (doctors) => {
-    console.log(doctors)
-    doctors?.forEach(doctor => {
-        console.log(doctor)
-        document.getElementById("doctors").innerHTML += `<div class="doctor-card">
-        <img class="doctor-img" src="${doctor.image}" alt="Doctor-image">
-        <h4>${doctor?.full_name}</h4>
-        <h6>${doctor?.designation[0]}</h6>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-        <p>${doctor?.specialization?.map(iteam => {
-            return `<button>${iteam}</button>`
-        })}</p>
-        <button>Details</button>
-    </div>`
-    })
+    // console.log(doctors.length)
+    // for remove previous data
+    document.getElementById("loding").style.display = "none"
+    if(doctors.length > 0){
+        doctors?.forEach(doctor => {
+            // console.log(doctor)
+            document.getElementById("doctors").innerHTML += `<div class="doctor-card col-md-4">
+            <img class="doctor-img" src="${doctor.image}" alt="Doctor-image">
+            <h4>${doctor?.full_name}</h4>
+            <h6>${doctor?.designation[0]}</h6>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            <p>${doctor?.specialization?.map(iteam => {
+                return `<button>${iteam}</button>`
+            })}</p>
+            <button>Details</button>
+        </div>`
+        })
+    }
+    else{
+        document.getElementById("doctors").innerHTML += `            <div class="nodata mt-2">
+        <img src="images/nodata.png" alt="">
+      </div>`
+    }
 
  }
  loadDoctors()
@@ -77,7 +92,7 @@ const loadSpecialization = () => {
       .then((res) => res.json())
       .then((data) => {
         data.forEach((item) => {
-            document.getElementById("drop-spe").innerHTML += `<li class="dropdown-item">${item?.name}</li>`;
+            document.getElementById("drop-spe").innerHTML += `<li onclick="loadDoctors('${item.name}')" class="dropdown-item">${item?.name}</li>`;
         });
     });
 };

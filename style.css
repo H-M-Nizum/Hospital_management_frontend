@@ -83,4 +83,8 @@ nav {
 .doctors-container{
     margin: 200px 50px;
 }
+
+#loding{
+    display: none;
+}
 /* -------------------Doctor section end---------------- */
