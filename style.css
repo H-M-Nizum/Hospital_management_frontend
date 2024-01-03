@@ -90,6 +90,12 @@ nav {
 /* -------------------Doctor section end---------------- */
 
 /* -------------------Review section start---------------- */
+
+.reviews{
+    margin: 100px;
+    justify-content: space-around;
+}
+
 .review-container{
     width: 1200px;
     height: 800px;
@@ -104,3 +110,9 @@ nav {
 }
 
 /* -------------------Review section end---------------- */
+
+/* =========================Footer section==================== */
+footer{
+    padding: 50px;
+    background: linear-gradient(66deg, #1CA8C7 -5.25%, #439FA5 46.76%, #4C7D8C 98.77%);
+}
