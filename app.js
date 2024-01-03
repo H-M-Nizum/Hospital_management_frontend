@@ -13,14 +13,14 @@ const displayServicesData = (services) => {
     services.forEach(service => {
         // console.log(service)
         // access parent tag : ul and add child li that contain services card
-        document.getElementById("services-container-id").innerHTML += `                <li id="service-li-id" class="slide-visible">
+        document.getElementById("services-container-id").innerHTML += `<li id="service-li-id" class="slide-visible">
         <div class="card shadow h-100">
             <div class="ratio ratio-16x9">
-                <img src="${service.image}" class="card-img-top" loading="lazy" alt="Services image">
+                <img src="${service?.image}" class="card-img-top" loading="lazy" alt="Services image">
             </div>
             <div class="card-body  p-3 p-xl-5">
-                <h3 class="card-title h5">${service.name}</h3>
-                <p class="card-text">${service.description.slice(0, 140)}</p>
+                <h3 class="card-title h5">${service?.name}</h3>
+                <p class="card-text">${service?.description.slice(0, 140)}</p>
                 <a href="#" class="btn btn-primary">Details</a>
             </div>
         </div>
@@ -63,7 +63,9 @@ const displayServicesData = (services) => {
             <p>${doctor?.specialization?.map(iteam => {
                 return `<button>${iteam}</button>`
             })}</p>
-            <button>Details</button>
+            <button class="btn btn-info m-2 p-2 text-white"> <a target="_blank" href="DoctorDetails.html?doctorId=${
+                doctor.id
+              }">Details</a> </button>
         </div>`
         })
     }
