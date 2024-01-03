@@ -106,5 +106,40 @@ const handleSearch = () => {
   };
   handleSearch()
 //  --------------------- Designation section end-----------------
+
  // ===================Doctor section  end===================
-//  
+
+ // ===================Review section start==================
+
+ const loadReview = () => {
+    fetch("https://testing-8az5.onrender.com/doctor/review/")
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data)
+        displayReview(data)
+    })
+ }
+ const displayReview = (reviews) => {
+    reviews.forEach(review => {
+        document.getElementById("reviews").innerHTML += `<li class="review col-md-3 slide-visible">
+        <div class="d-flex gap-2">
+          <div>
+            <img class="review_img" src="images/review.webp" alt="Reviewimg">
+          </div>
+          <div>
+            <h4>${review.reviewer}</h4>
+            <h4>${review.rating}</h4>
+          </div>
+        </div>
+        <div>
+          <h5>Doctor ${review.doctor}</h5>
+          <p>${review.body}</p>
+          <small>${review.created_on}</small>
+        </div>
+      </li>
+      `
+    })
+
+ }
+ loadReview()
+ // ===================Review section  end===================

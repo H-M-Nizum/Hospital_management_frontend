@@ -88,3 +88,19 @@ nav {
     display: none;
 }
 /* -------------------Doctor section end---------------- */
+
+/* -------------------Review section start---------------- */
+.review-container{
+    width: 1200px;
+    height: 800px;
+    margin: 50px auto;
+}
+
+
+.review_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+/* -------------------Review section end---------------- */
