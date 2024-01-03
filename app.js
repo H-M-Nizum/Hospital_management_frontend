@@ -34,8 +34,10 @@ const displayServicesData = (services) => {
  
  // ===================Doctor section  start===================
 
- const loadDoctors = () => {
-    fetch("http://testing-8az5.onrender.com/doctor/list/")
+ const loadDoctors = (search) => {
+    fetch(`https://testing-8az5.onrender.com/doctor/list/?search=${
+        search ? search : ""
+      }`)
     .then((res) => res.json())
     .then((data) => displayDoctors(data?.results))
  }
@@ -81,6 +83,13 @@ const loadSpecialization = () => {
 };
 
 loadSpecialization();
+
+const handleSearch = () => {
+    const values = document.getElementById("searchs").value;
+    console.log(values)
+    loadDoctors(values);
+  };
+  handleSearch()
 //  --------------------- Designation section end-----------------
  // ===================Doctor section  end===================
- 
+//  
