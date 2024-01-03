@@ -124,6 +124,7 @@ const handleSearch = () => {
  const displayReview = (reviews) => {
     reviews.forEach(review => {
         document.getElementById("reviews").innerHTML += `<li class="review col-md-3 slide-visible">
+        <div class="review_card">
         <div class="d-flex gap-2">
           <div>
             <img class="review_img" src="images/review.webp" alt="Reviewimg">
@@ -134,9 +135,10 @@ const handleSearch = () => {
           </div>
         </div>
         <div>
-          <h5>Doctor ${review.doctor}</h5>
+          <h5>Dr. ${review.doctor}</h5>
           <p>${review.body}</p>
           <small>${review.created_on}</small>
+        </div>
         </div>
       </li>
       `
