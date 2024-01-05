@@ -30,6 +30,35 @@
               <li class="menu">Contact us</li>
               <li class="menu"><a target="_blank" href="login.html">Login</a></li>
             </div>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                profile
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-dark"
+                aria-labelledby="dropdownMenuButton2"
+              >
+                <li>
+                  <a class="dropdown-item active" href="userDetails.html"
+                    >profile</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="allAppointments.html"
+                    >all Appointment</a
+                  >
+                </li>
+                <li onclick="handlelogOut()">
+                  <a class="dropdown-item">logout</a>
+                </li>
+              </ul>
+            </div>
         </nav>
         <!-- ----------------------navbar section end---------------------- -->
 

@@ -145,6 +145,7 @@ const handleAppointment = () => {
     });
 };
 
+// get patient id use by user id
 const loadPatientId = () => {
   const user_id = localStorage.getItem("user_id");
 
